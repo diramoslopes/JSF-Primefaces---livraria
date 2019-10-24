@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</f:facet>
+
+</h:head>
+
+<h:form>
+	<div>
+		<p:panelGrid class="ui-g-">
+			<h:panelGrid columns="3">
+			
+				<div class="ui-g-12">
+					<p:inputText />
+				</div>
+				
+				<div class="ui-g-12">
+					<p:password />
+				</div>
+				
+				<div class="ui-g-12">
+					<p:commandButton value="Enviar" update="@form" />
+				</div>
+
+			</h:panelGrid>
+		</p:panelGrid>
+	</div>
+
+
+</h:form>
+
+<div class="ui-g">
+	<div class="ui-g-12 ui-md-6 ui-lg-3">ui-g-12 ui-md-6 ui-lg-3</div>
+	<div class="ui-g-12 ui-md-6 ui-lg-3">ui-g-12 ui-md-6 ui-lg-3</div>
+	<div class="ui-g-12 ui-md-6 ui-lg-3">ui-g-12 ui-md-6 ui-lg-3</div>
+	<div class="ui-g-12 ui-md-6 ui-lg-3">ui-g-12 ui-md-6 ui-lg-3</div>
+</div>
+
+
+</html>

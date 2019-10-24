@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <ui:composition template="_template.xhtml">
+    
+	    <ui:define name="titulo">
+				<p:outputPanel>JSF+PrimeFaces componente carousel </p:outputPanel>
+		</ui:define>
+		
+		<ui:define name="conteudo">
+		
+				<h:form>
+				
+					<p:carousel value="#{livroBean.livros}" headerText="Tabela de livros" var="livro" responsive="true">
+						<p:panelGrid columns="2" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
+   							<!-- aqui vem o livro-->
+   							
+   							 <f:facet name="header">
+								  #{livro.titulo}
+							 </f:facet>
+							 
+							  <h:outputText value="ISBN" />
+							  
+							  <h:outputText value="#{livro.isbn}"/>
+   							
+						</p:panelGrid>
+					</p:carousel>     
+					
+					<p:carousel value="#{livroBean.livros}" headerText="Livros Custom" var="car" itemStyle="height:200px;text-align:center" numVisible="1" easing="easeOutBounce" style="width:250px" circular="true">
+				        <h:panelGrid columns="2" style="width:100%" columnClasses="label,value">
+				            <f:facet name="header">
+				               #{livro.titulo} 
+				            </f:facet>
+				 
+				            <h:outputText value="ISBN" />
+				            <h:outputText value="#{car.isbn}" />
+				 
+				            <h:outputText value="Preço" />
+				            <h:outputText value="#{car.preco}" />
+				 
+				        </h:panelGrid>
+    				</p:carousel> 
+					           
+				</h:form>
+		
+		</ui:define>
+	
+	</ui:composition>
+    
+</html>

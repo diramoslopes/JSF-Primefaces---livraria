@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+	<head>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>Login JSF com CSS</title>
+	
+	<!--Chamada ao arquivo CSS -->
+	
+	<link rel="StyleSheet" type="text/css" href="css/estilos.css"
+		media="screen" />
+	
+	</head>
+	
+	<body>
+	
+		<f:view>
+		
+		   <div class="container">
+        	<div class="form-box">
+				<h:form>
+						<h:graphicImage styleClass="logo" value="#{resource['img:logo_faesp.PNG']}" />
+						
+						<h1>Login JSF + CSS</h1>
+						
+	                    <h:inputText 
+	                    	id="username" 
+	                    	styleClass="form-input"
+	                    	value="#{loginBean.usuario.email}"
+	                    	required="true" requiredMessage="Usuario é obrigatório" 
+	                    	>
+	                    	<f:passThroughAttribute name="placeholder" value="Informe seu usuário" />
+	                    </h:inputText>
+	                    
+	                    <h:message for="username" id="messageUsuario" />
+	
+	                    <h:inputSecret
+	                    	id="password" 
+	                    	styleClass="form-input"
+	                    	value="#{loginBean.usuario.senha}" 
+	                    	required="true" requiredMessage="Senha é obrigatória"
+	                    	>
+	                    	<f:passThroughAttribute name="placeholder" value="Informe sua senha" />
+	                    </h:inputSecret>
+	                    
+	                    <h:message for="password" id="messageSenha" />
+	                    	
+	                    <h:commandButton 
+	                    	value="Entrar" 
+	                    	action="#{loginBean.efetuaLogin}" 
+	                    	type="submit" 
+	                    	styleClass="form-btn"/>
+				</h:form>
+			 </div>
+		 </div>
+	
+		</f:view>
+	
+	</body>
+
+
+
+
+
+</html>
